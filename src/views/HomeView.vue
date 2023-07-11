@@ -24,7 +24,7 @@ const props = defineProps(['getQuote',"quoteText","quoteAuthor"])
   .quote{
     margin-top: 50px;
     padding: 19px;
-    width: 60%;
+    /* width: 60%; */
     display: grid;
     align-items: center;
     justify-content: space-around;

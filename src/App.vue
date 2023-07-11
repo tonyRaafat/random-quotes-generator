@@ -57,12 +57,13 @@ async function getResponse(author,genre) {
 
 <template >
   <header> 
-    <h2 class="clickable" @click="()=>router.push('/')">Quote Generator</h2> 
+    <img src="./assets/home.svg" class="clickable" @click="()=>router.push('/')">
     <div class="search-cont">
       <input  @keyup.enter="searchQuotes" type="text" placeholder="Select genre" id="genre-input">
-      <button :disabled="isFetching" @click="searchQuotes" >search</button>
+      <button :disabled="isFetching" @click="searchQuotes" ><img src="../src/assets/searchIcon.svg" alt=""></button>
     </div>
-    <button id="randomizer" :disabled="isFetching" @click="getQuote">random</button>
+    <button class="randomizer" :disabled="isFetching" @click="getQuote"><img src="../src/assets/random.svg" alt=""></button>
+    
   </header>
   <div class="not-found" v-if="isNotFound" >
       No quotes found for this genre! 🤷‍♂️
@@ -74,22 +75,26 @@ async function getResponse(author,genre) {
  header{
     height: 3rem;
     display: flex;
-    padding: 5px 19px 5px 19px;
+    padding: 8px 19px 5px 19px;
     color: #69748a;
   }
   input{
     height: 100%;
     width: 100%;
-    border: 1.2px solid #758cb8;
+    /* border: 1.2px solid #758cb8; */
+    border: none ;
     border-radius: 6px;
     margin-right: 2px;
     padding: 4.5px;
-    font-size: 1.5em;
+    font-size: 1rem;
   }
   .search-cont{
+    place-self: center;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    border: 1.2px solid #758cb8;
+    border-radius: 6px;
     display: flex;
     align-items: center;
   }
@@ -102,12 +107,14 @@ async function getResponse(author,genre) {
   button{
     height: 100%;
     background:#fff;
-    border: 1.2px solid #758cb8;
+    /* border: 1.2px solid #758cb8; */
+    border: none;
     border-radius: 6px;
+    padding: 6px;
     color: #69748a;
     cursor: pointer;
     font-size:1.5em;
-    margin-left: auto;
-    outline:none;
+    /* margin-left: auto; */
+    /* outline:none; */
   }
 </style>
