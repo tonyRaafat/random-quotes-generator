@@ -79,6 +79,7 @@ async function getResponse(author,genre) {
     color: #69748a;
   }
   input{
+    all: unset;
     height: 100%;
     width: 100%;
     /* border: 1.2px solid #758cb8; */
